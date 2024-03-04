@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uno Graham</title>
+    <style>
+        body {
+            background-color: #ffe9f8; 
+            background: linear-gradient(to bottom, #f0a3d7, #ffe9f8);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 3s ease forwards;
+            color: #300b24;
+        }
+
+        .logo {
+            width: 1000px; 
+            height: auto; 
+            transform: translate(-45%, -50%); 
+            position: absolute;
+            top: 125px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            transition: font-size 4s ease; 
+        }
+
+        .fade-in h1 {
+            font-size: 6em; 
+        }
+    </style>
+</head>
+<body>
+    <div class="fade-in">
+        <img src="assets/UnoGraham_LOGO.png" alt="Logo Uno Graham" class="logo">
+    </div>
+</body>
+</html>
