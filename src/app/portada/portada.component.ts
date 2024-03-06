@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
   styleUrl: './portada.component.css'
 })
 
-export class PortadaComponent {
+export class PortadaComponent { 
+  constructor(private router: Router) {}
+
+  redireccionarALaInicio() {
+    this.router.navigate(['/inicio']); 
+  }
 }
 
