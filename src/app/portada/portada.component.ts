@@ -23,7 +23,7 @@ import { Router } from '@angular/router';
         overflow: hidden; 
         justify-content: center;
         align-items: center;
-        height: 98vh;
+        height: 100vh;
     }
 
     .fade-in {
@@ -81,6 +81,6 @@ export class PortadaComponent {
   constructor(private router: Router) {}
 
   redireccionarALaInicio() {
-    this.router.navigate(['inicio']); 
+    this.router.navigate(['login']); 
   }
 }
