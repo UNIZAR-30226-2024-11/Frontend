@@ -10,18 +10,18 @@
          </div>
          <form action="#">
             <div class="field">
-               <input type="text" required>
-               <label>Usuario</label>
-            </div>
-            <div class="field">
-               <input type="password" required>
+                <input type="text" [(ngModel)]="usuario" name="usuario" required>
+                <label>Usuario</label>
+             </div>
+             <div class="field">
+                <input type="password" [(ngModel)]="password" name="password" required>
                <label>Contraseña</label>
             </div>
             <div class="field">
                <input type="submit" value="Login">
             </div>
             <div class="signup-link">
-               ¿No estás registrado? <a href='#registro'>Registrate ahora</a>
+               ¿No estás registrado? <a href='#register'>Registrate ahora</a>
             </div>
          </form>
       </div>
