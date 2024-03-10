@@ -80,11 +80,18 @@ body {
 }
 
 .scroller__inner {
+    animation: scroll 20s linear infinite;
     gap: 200px;
     display: inline-flex;
     rotate: 22.5deg;
 
 }
+
+@keyframes scroll {
+  to {
+    transform: translate(-31.5%);
+  }  
+} 
 
 .contorno_UNO {
     opacity: 0.6;
