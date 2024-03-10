@@ -14,7 +14,7 @@
             <div class="UNO_blue contorno_UNO"></div>
         </ul>
     </div>
-    <div class="scroller">
+    <div class="displaced scroller">
         <ul class="lista-unos scroller__inner">
             <div class="UNO_green contorno_UNO"></div>
             <div class="UNO_green contorno_UNO"></div>
@@ -42,7 +42,7 @@
             <div class="UNO_red contorno_UNO"></div>
         </ul>
     </div>
-    <div class="scroller">
+    <div class="displaced scroller">
         <ul class="lista-unos scroller__inner">
             <div class="UNO_yellow contorno_UNO"></div>
             <div class="UNO_yellow contorno_UNO"></div>
@@ -70,7 +70,7 @@
             <div class="UNO_blue contorno_UNO"></div>
         </ul>
     </div>
-    <div class="scroller">
+    <div class="displaced scroller">
         <ul class="lista-unos scroller__inner">
             <div class="UNO_green contorno_UNO"></div>
             <div class="UNO_green contorno_UNO"></div>
@@ -98,7 +98,7 @@
             <div class="UNO_red contorno_UNO"></div>
         </ul>
     </div>
-    <div class="scroller">
+    <div class="displaced scroller">
         <ul class="lista-unos scroller__inner">
             <div class="UNO_yellow contorno_UNO"></div>
             <div class="UNO_yellow contorno_UNO"></div>
@@ -128,15 +128,21 @@
     </div>
 </div>
 
-
 <div class="container">
+    <div class="profile_wraper">
+        <app-user></app-user>
+        <app-level></app-level>
+    </div>
 	<div class="logo">
 		<img src="assets/Logotipo_centrado.png" alt="UnoGraham">
 	</div>
 	<nav class="menu">
 		<a href="#portada">CREAR PARTIDA</a>
-		<a href="#portada">TORNEOS</a>
-		<a href="#portada">TIENDA</a>
-		<a href="#portada">LOGOUT</a>
+		<a href="#portada">UNIRSE A PARTIDA</a>
+		<a href="#portada">TORNEO</a>
 	</nav>
+    <div class="log_opt_wraper">
+        <button type="button" class="logout_button" (click)="btnClick()">LOGOUT</button>
+        <button type="button" class="options_button" (click)="btnClick()">AJUSTES</button>
+    </div>  
 </div>

@@ -11,6 +11,13 @@ body {
     overflow: hidden;
 }
 
+.pantalla2 {
+    position: fixed;
+    height: 98vh;
+    width: 98vw;
+    overflow: hidden;
+}
+
 .container {
 	align-items: center;
 	display: flex;
@@ -68,8 +75,73 @@ body {
 	}
 }
 
-.menu a:last-child {
-    background: rgba(214, 106, 106, 0.8);
+.log_opt_wraper {
+    width: 80.5%;
+}
+
+.logout_button {
+    font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 58%;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(231, 42, 42, 0.425);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.07);
+			background: rgba(228, 28, 28, 0.568);
+        }
+}
+
+.options_button {
+
+    font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+        float: right;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 40%;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(143, 136, 136, 0.473);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.1);
+			background: rgba(112, 99, 99, 0.568);
+        }
+}
+
+.profile_wraper {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    background-color: #457e16;
 }
 
 .scroller {
@@ -77,6 +149,11 @@ body {
     left: -400px;
     bottom: 250px;
     margin-top: 75px;
+}
+
+.displaced {
+    left: -200px;
+    bottom: 150px;
 }
 
 .scroller__inner {

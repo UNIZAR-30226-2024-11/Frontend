@@ -1,0 +1,15 @@
+.barra {
+    width: 300px; /* Ancho inicial de la barra */
+    height: 20px;
+    border-radius: 7px;
+    background-color: #3498db; /* Color de la barra */
+    margin-top: 20px;
+}
+
+p {
+    text-align: center; 
+    font-family: Arial; 
+    font-size: 30px; 
+    COLOR: #ffffff; 
+    text-shadow: 0px 0px 9px #508AD3;
+}
