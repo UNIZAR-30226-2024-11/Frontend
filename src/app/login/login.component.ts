@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,20 +12,21 @@ interface LoginResponse {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, HttpClientModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  
   usuario: string = '';
   password: string = '';
   error: string = '';
-  /*
-  constructor(private http: HttpClient,
-              private router: Router) {}
- 
+  
+  
+  constructor(private http: HttpClient, private router: Router) {}
+  
   login(): void {
-    this.http.post<LoginResponse>('/api/login', { email: this.usuario, password: this.password })
+    this.http.post<LoginResponse>('/api/login', { usuario: this.usuario, password: this.password })
       .pipe(
         catchError(error => {
           console.error('Error de inicio de sesión:', error);
@@ -42,5 +43,4 @@ export class LoginComponent {
         }
       });
   }
-  */
 }

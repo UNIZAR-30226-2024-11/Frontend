@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+body {
+	background: #f7f7f7;
+}
+
+.pantalla {
+    position: fixed;
+    background: #f2f2f2;
+    height: 98vh;
+    width: 98vw;
+    overflow: hidden;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	z-index: 5;
+	position: relative;
+	.logo {
+		margin: 0 auto;
+		margin-bottom: 10vw;
+        border: 5px solid;
+        border-color: #333;
+		max-width: 250px;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 25%;
+		img {
+			width: 100%;
+		}
+	}
+}
+.menu {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	grid-area: 1/1/2/2;
+	position: relative;
+	a {
+		font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 80%;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.1);
+			background: rgba(255, 255, 255, 0.8);
+		}
+	}
+}
+
+.menu a:last-child {
+    background: rgba(214, 106, 106, 0.8);
+}
+
+.scroller {
+    position: relative;
+    left: -400px;
+    bottom: 250px;
+    margin-top: 75px;
+}
+
+.scroller__inner {
+    gap: 200px;
+    display: inline-flex;
+    rotate: 22.5deg;
+
+}
+
+.contorno_UNO {
+    opacity: 0.6;
+    width: 90px; 
+    height: 30px; 
+    border-radius: 12px; 
+    padding: 20px;
+}
+
+.UNO_blue {
+    border: 7px solid #3498db;
+    background-color: #3498db;
+}
+
+.UNO_red {
+    border: 7px solid #c22b2b;
+    background-color: #c22b2b;
+}
+
+.UNO_green {
+    border: 7px solid #457e16;
+    background-color: #457e16;
+}
+
+.UNO_yellow {
+    border: 7px solid #e2a90c;
+    background-color: #e2a90c;
+}
