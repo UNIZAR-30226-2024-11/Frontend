@@ -1,15 +1,24 @@
 .barra {
-    width: 300px; /* Ancho inicial de la barra */
     height: 20px;
     border-radius: 7px;
-    background-color: #3498db; /* Color de la barra */
+    background-color: #dd79cc; /* Color de la barra */
+}
+
+.barra-wraper {
+    width: 140px; /* Ancho inicial de la barra */
+    justify-content: center;
+    height: 20px;
+    border: 2px solid;
+    border-color: #8f337f;
+    border-radius: 8px;
     margin-top: 20px;
+    overflow: auto;
 }
 
 p {
     text-align: center; 
     font-family: Arial; 
     font-size: 30px; 
-    COLOR: #ffffff; 
-    text-shadow: 0px 0px 9px #508AD3;
+    COLOR: #360d2a; 
+    text-shadow: 0px 0px 9px #bd50d3;
 }

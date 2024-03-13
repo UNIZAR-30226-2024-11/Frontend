@@ -90,7 +90,7 @@ body {
 		text-align: center;
 		margin: 1vh auto;
 		padding: 2.5vh 0;
-		width: 58%;
+		width: 80%;
         border: 3px solid;
         border-color: #333;
 		background: rgba(231, 42, 42, 0.425);
@@ -139,9 +139,9 @@ body {
 
 .profile_wraper {
     position: absolute;
-    right: 1%;
-    top: 2%;
-    background-color: #457e16;
+    right: 9%;
+    top: 6%;
+    /*background-color: #457e16;*/
 }
 
 .scroller {
