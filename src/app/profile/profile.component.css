@@ -69,3 +69,19 @@
     justify-content: center;
     align-items: center;
 }
+
+.flujo {
+    top: 100px;
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-jugador{
+    top: 100px;
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}

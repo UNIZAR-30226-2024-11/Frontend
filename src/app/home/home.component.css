@@ -144,6 +144,12 @@ body {
     /*background-color: #457e16;*/
 }
 
+.tienda_wraper {
+    position: absolute;
+    right: 81%;
+    top: 6%;
+}
+
 .scroller {
     position: relative;
     left: -400px;
