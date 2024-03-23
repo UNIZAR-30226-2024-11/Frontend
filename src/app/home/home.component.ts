@@ -3,6 +3,10 @@ import { Router } from '@angular/router';
 import { UserComponent } from '../profile/user/user.component';
 import { LevelComponent } from '../profile/level/level.component';
 import { TiendaComponent } from './tienda/tienda.component';
+<<<<<<< Updated upstream
+=======
+import { ShopComponent } from '../shop/shop.component';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-home',

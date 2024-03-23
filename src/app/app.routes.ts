@@ -5,6 +5,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+<<<<<<< Updated upstream
+=======
+import { ShopComponent } from './shop/shop.component';
+>>>>>>> Stashed changes
 
 export const routes: Routes = [
     { path: 'inicio', component: InicioComponent },
