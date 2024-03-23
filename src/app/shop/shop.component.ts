@@ -30,7 +30,7 @@ export class ShopComponent {
     }
     else if (monedas >= logosValor) {
         this.logos[i] = true;
-        this.monedas = monedas - logosValor;
+        monedas = monedas - logosValor;
         return monedas;
     } else {
         return monedas;
