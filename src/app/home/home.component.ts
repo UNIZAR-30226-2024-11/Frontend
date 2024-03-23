@@ -18,8 +18,4 @@ export class HomeComponent {
   btnClick() {
     this.router.navigate(['portada']); 
   }
-
-  navigateToShop(): void {
-    this.router.navigate(['/shop']);
-  }
 }
