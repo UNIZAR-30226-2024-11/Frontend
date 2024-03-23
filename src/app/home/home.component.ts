@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 import { UserComponent } from '../profile/user/user.component';
 import { LevelComponent } from '../profile/level/level.component';
 import { TiendaComponent } from './tienda/tienda.component';
+import { ShopComponent } from '../../shop/shop.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [UserComponent, LevelComponent, TiendaComponent],
+  imports: [UserComponent, LevelComponent, TiendaComponent, ShopComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -16,5 +17,9 @@ export class HomeComponent {
 
   btnClick() {
     this.router.navigate(['portada']); 
+  }
+
+  navigateToShop(): void {
+    this.router.navigate(['/shop']);
   }
 }
