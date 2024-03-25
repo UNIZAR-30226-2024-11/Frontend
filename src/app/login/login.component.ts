@@ -1,13 +1,10 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { catchError, throwError } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-interface LoginResponse {
-  error?: string;
-  token?: string;
-}
 
 @Component({
   selector: 'app-login',
@@ -16,31 +13,30 @@ interface LoginResponse {
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
+
 export class LoginComponent {
-  
-  usuario: string = '';
+
+  correo: string = '';
   password: string = '';
-  error: string = '';
-  
-  
-  constructor(private http: HttpClient, private router: Router) {}
-  
-  login(): void {
-    this.http.post<LoginResponse>('/api/login', { usuario: this.usuario, password: this.password })
-      .pipe(
-        catchError(error => {
-          console.error('Error de inicio de sesión:', error);
-          this.error = 'Error de inicio de sesión';
-          return throwError(() => new Error(error)); 
-        })
-      )
+  private apiURL = 'http://localhost:5432'; 
+
+  constructor(private router: Router,
+              private cookieService: CookieService,
+              private http: HttpClient) { }
+
+  login() {
+    this.http.post<any>(`${this.apiURL}/login`, { email: this.correo, password: this.password })
       .subscribe(response => {
-        if (response.error) {
-          this.error = response.error;
-        } else if (response.token) {
-          localStorage.setItem('token', response.token);
-          this.router.navigate(['home']);
+        if (response.token) {
+          // Autenticación válida
+          this.cookieService.set('token', response.token);
+          this.router.navigate(['/home']);
+        } else {
+          // Error de autenticación
+          console.error(response.error);
         }
+      }, error => {
+        console.error('Error en la solicitud HTTP:', error);
       });
   }
 }
