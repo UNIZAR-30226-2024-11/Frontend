@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { UserComponent } from '../profile/user/user.component';
 import { LevelComponent } from '../profile/level/level.component';
 import { TiendaComponent } from './tienda/tienda.component';
-import { ShopComponent } from '../../shop/shop.component';
+import { ShopComponent } from '../shop/shop.component';
 
 @Component({
   selector: 'app-home',
