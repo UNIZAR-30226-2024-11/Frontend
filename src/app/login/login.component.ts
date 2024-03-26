@@ -33,7 +33,7 @@ export class LoginComponent {
           this.router.navigate(['/home']);
         } else {
           // Error de autenticación
-          console.error(response.error);
+          console.error('Error en la autenticación del usuario', response.error);
         }
       }, error => {
         console.error('Error en la solicitud HTTP:', error);
