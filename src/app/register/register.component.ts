@@ -27,6 +27,7 @@ export class RegisterComponent {
 
   register() {
     if (this.password == this.password_confirm){
+      this.passwordsMatch = true;
       this.http.post<any>(`${this.apiURL}/register`, { username: this.usuario,  email: this.correo, 
                                                       password: this.password })
         .subscribe(response => {
