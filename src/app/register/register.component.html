@@ -8,23 +8,24 @@
          <div class="title">
             Registro
          </div>
-         <form action="#">
+         <form (ngSubmit)="register()">
             <div class="field">
-               <input type="text" required>
+               <input type="text" [(ngModel)]="usuario" name="usuario" required>
                <label>Usuario</label>
             </div>
             <div class="field">
-                <input type="text" required>
+                <input type="text" [(ngModel)]="correo" name="correo" required>
                 <label>Correo</label>
              </div>
             <div class="field">
-               <input type="password" required>
+               <input type="password" [(ngModel)]="password" name="password" required>
                <label>Contraseña</label>
             </div>
             <div class="field">
-                <input type="password" required>
+                <input type="password" [(ngModel)]="password_confirm" name="password_confirm" required>
                 <label>Confirmar contraseña</label>
              </div>
+             <div *ngIf="!passwordsMatch" style="color:brown; text-align: center; margin-top: 15px;">   Las contraseñas no coinciden </div>
             <div class="field">
                <input type="submit" value="Registrarse">
             </div>
