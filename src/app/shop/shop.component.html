@@ -126,7 +126,13 @@
         </ul>
     </div>
 </div>
+
 <div class="todo">
+    <div class="flujo">
+        <a href="#home">
+            <app-flujo></app-flujo>
+        </a>
+    </div>
     <nav class="titulos">
         <div class="titulo">
             <h1>TIENDA</h1>
@@ -138,38 +144,71 @@
 
     <nav class="logos">
         <div class="caja">
-            <img src="assets/perfil1.png" width="100">
+            <img src="assets/perfil1.png" width="150">
             <p>LOGO1</p>
-            <p>50 MONEDAS</p>
+            <p>{{logosValor}} MONEDAS</p>
+            <h4 (click)="comprarLogo(logosValor, monedas, 0)">{{getTextoLogos(0)}}</h4>
         </div>
         <div class="caja">
-            <i><img src="assets/perfil2.png" width="100"></i>
+            <i><img src="assets/perfil2.png" width="150"></i>
             <p>LOGO2</p>
-            <p>50 MONEDAS</p>
+            <p>{{logosValor}} MONEDAS</p>
+            <h4 (click)="comprarLogo(logosValor, monedas, 1)">{{getTextoLogos(1)}}</h4>
         </div>
         <div class="caja">
-            <img src="assets/perfil3.png" width="100">
+            <img src="assets/perfil3.png" width="150">
             <p>LOGO3</p>
-            <p>50 MONEDAS</p>
+            <p>{{logosValor}} MONEDAS</p>
+            <h4 (click)="comprarLogo(logosValor, monedas, 2)">{{getTextoLogos(2)}}</h4>
         </div>
         <div class="caja">
-            <img src="assets/perfil4.png" width="100">
+            <img src="assets/perfil4.png" width="150">
             <p>LOGO4</p>
-            <p>50 MONEDAS</p>
+            <p>{{logosValor}} MONEDAS</p>
+            <h4 (click)="comprarLogo(logosValor, monedas, 3)">{{getTextoLogos(3)}}</h4>
         </div>
         <div class="caja">
-            <img src="assets/perfil5.png" width="100">
+            <img src="assets/perfil5.png" width="150">
             <p>LOGO5</p>
-            <p>50 MONEDAS</p>
+            <p>{{logosValor}} MONEDAS</p>
+            <h4 (click)="comprarLogo(logosValor, monedas, 4)">{{getTextoLogos(4)}}</h4>
         </div>
     </nav>
 
-    <div class="ap">
-        <h2>FONDOS</h2>
-    </div>
+    <nav class="titulos">
+        <div class="ap">
+            <h2>FONDOS</h2>
+        </div>
+    </nav>
+
     <nav class="fondos">
-        <div><a>FONDO1</a></div>
-        <div><a>FONDO2</a></div>
-        <div><a>FONDO3</a></div>
+        <div class="caja2">
+            <img src="assets/tapete1.PNG" width="150">
+            <p>FONDO1</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarFondo(fondosValor, monedas, 0)">{{getTextoFondos(0)}}</h4>
+        </div>
+        <div class="caja2">
+            <img src="assets/tapete2.PNG" width="150">
+            <p>FONDO2</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarFondo(fondosValor, monedas, 1)">{{getTextoFondos(1)}}</h4>
+        </div>
+        <div class="caja2">
+            <img src="assets/tapete3.PNG" width="150">
+            <p>FONDO3</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarFondo(fondosValor, monedas, 2)">{{getTextoFondos(2)}}</h4>
+        </div>
+        <div class="caja2">
+            <img src="assets/tapete4.PNG" width="150">
+            <p>FONDO4</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarFondo(fondosValor, monedas, 3)">{{getTextoFondos(3)}}</h4>
+
+        </div>
+    </nav>
+    <nav class="titulos">
+        <div class="titulo"><h6>Tus monedas son: {{ monedas }}</h6></div>
     </nav>
 </div>

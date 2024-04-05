@@ -163,49 +163,13 @@ body {
 		margin: 1vh auto;
 		padding: 2.5vh 0;
 		width: 80%;
-        border: 3px solid;
-        border-color: #333;
-		backdrop-filter: blur(70px);
-		border-radius: 10px;
-		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
-			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
-		text-decoration: none;
-		will-change: color, text-shadow, font-size;
 	}
-}
-
-.caja {
-    border: 3px solid black;
-    padding: 10px;
-    width: 200px;
-	border-radius: 10px;
-    margin-bottom: 20px;
-	background: rgba(255, 255, 255, 0.3);
-	backdrop-filter: blur(70px);
-	cursor: pointer;
-	transition: ease all 0.3s;
-	&:hover {
-		transform: scale(1.05);
-		background: rgba(255, 255, 255, 0.8);
-	}
-}
-
-.logos .caja {
-    margin-right: 50px; /* Agrega un margen derecho de 50px entre cada caja */
-}
-
-.fondos {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	/*grid-area: 1/1/2/2;*/
-	position: relative;
-	a {
+	h4{
 		font-family: Raleway, serif;
 		color: #333;
 		cursor: pointer;
 		font-size: 20px;
-		font-weight: 100;
+		font-weight: 700;
 		line-height: 1;
 		position: relative;
 		text-align: center;
@@ -223,8 +187,85 @@ body {
 		will-change: color, text-shadow, font-size;
 		transition: ease all 0.3s;
 		&:hover {
-			transform: scale(1.1);
-			background: rgba(255, 255, 255, 0.8);
+			transform: scale(1.05);
+			background: rgba(4, 141, 27, 0.8);
+			box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+.caja {
+    border: 3px solid black;
+    padding: 10px;
+    width: 200px;
+	border-radius: 10px;
+    margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(70px);
+	text-align: center;
+	cursor: pointer;
+	transition: ease all 0.3s;
+	&:hover {
+		transform: scale(1.05);
+		background: rgba(255, 255, 255, 0.8);
+	}
+}
+
+.logos .caja {
+    margin-right: 50px; /* Agrega un margen derecho de 50px entre cada caja */
+}
+
+.fondos .caja2 {
+    margin-right: 50px; /* Agrega un margen derecho de 50px entre cada caja */
+}
+
+.fondos {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	/*grid-area: 1/1/2/2;*/
+	position: relative;
+	justify-content: center;
+	p {
+		font-family: Raleway, serif;
+		color: #333;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 80%;
+	}
+	h4{
+		font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 80%;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			background: rgba(49, 9, 227, 0.8);
+			box-shadow: 1px 1px 0 0 rgba(49, 9, 227, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
 		}
 	}
 
@@ -240,7 +281,33 @@ body {
     }
 
     img{
-        width: 150px; /* Ancho deseado de la imagen */
+        width: 200px; /* Ancho deseado de la imagen */
         height: 150px; /* Alto deseado de la imagen */
     }
+}
+
+.caja2 {
+    border: 3px solid black;
+    padding: 10px;
+    width: 275px;
+	border-radius: 10px;
+    margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(70px);
+	text-align: center;
+	cursor: pointer;
+	transition: ease all 0.3s;
+	&:hover {
+		transform: scale(1.05);
+		background: rgba(255, 255, 255, 0.8);
+	}
+}
+
+.flujo {
+    top: 150px;
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
 }
