@@ -7,8 +7,8 @@ body {
 .pantalla {
     position: fixed;
     background: #f2f2f2;
-    height: 98vh;
-    width: 98vw;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -109,3 +109,4 @@ a {
     border: 7px solid #e2a90c;
     background-color: #e2a90c;
 }
+
