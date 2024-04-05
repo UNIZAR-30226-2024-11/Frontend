@@ -1,14 +1,13 @@
 
 .wraper_container {
     position: absolute;
-    background-color: #f2f2f2;
     width:98vw;
     height: 100vh;
 }
 
 .text {
     width: 100%;
-    top: 610px;
+    top: 550px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -45,8 +44,8 @@ h1 {
   }
   
   .item {
-    width: 90px;
-    height: 150px;
+    width: 50px;
+    height: 80px;
     border-radius: 10px;
     margin: 25px;
     position: absolute;
@@ -113,3 +112,72 @@ h1 {
     50% {transform: translate(100px, -100px)} 
     75% {transform: translate(0, -100px)} 
   }
+
+  .pantalla {
+    position: fixed;
+    background: #f2f2f2;
+    height: 98vh;
+    width: 98vw;
+    overflow: hidden;
+}
+
+.pantalla2 {
+    position: fixed;
+    height: 98vh;
+    width: 98vw;
+    overflow: hidden;
+}
+
+.scroller {
+    position: relative;
+    left: -400px;
+    bottom: 250px;
+    margin-top: 75px;
+}
+
+.displaced {
+    left: -200px;
+    bottom: 150px;
+}
+
+.scroller__inner {
+    animation: scroll 20s linear infinite;
+    gap: 200px;
+    display: inline-flex;
+    rotate: 22.5deg;
+
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(-31.5%);
+  }  
+} 
+
+.contorno_UNO {
+    opacity: 0.6;
+    width: 90px; 
+    height: 30px; 
+    border-radius: 12px; 
+    padding: 20px;
+}
+
+.UNO_blue {
+    border: 7px solid #3498db;
+    background-color: #3498db;
+}
+
+.UNO_red {
+    border: 7px solid #c22b2b;
+    background-color: #c22b2b;
+}
+
+.UNO_green {
+    border: 7px solid #457e16;
+    background-color: #457e16;
+}
+
+.UNO_yellow {
+    border: 7px solid #e2a90c;
+    background-color: #e2a90c;
+}
