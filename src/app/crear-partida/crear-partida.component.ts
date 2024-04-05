@@ -13,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 
 export class CrearPartidaComponent {
   codigoSala: string = '145334'; // Se deberá generar aleatoriamente??
-  numJugadores: number = 0;
+  numJugadores: number = 2;
 
   constructor(private clipboard: Clipboard,
               private toastr: ToastrService) {}
@@ -23,3 +23,4 @@ export class CrearPartidaComponent {
     this.toastr.success('Copiado al portapapeles', 'CÓDIGO DE SALA');
   }
 }
+
