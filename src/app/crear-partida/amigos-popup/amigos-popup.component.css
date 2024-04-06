@@ -1,0 +1,62 @@
+.lista-amigos-wraper {
+    background-color: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;    
+}
+
+.lista-amigos-container {
+    text-align: center;
+    color:#f1f1f1;
+    position: absolute;
+    cursor: default;
+    vertical-align: middle;
+    left: 588px;
+    line-height: 100px;
+    border-radius: 15px 15px 0px 0px;
+    background-color: #db552c;
+    top: 60px;
+    width: 708px;
+    height: 100px;
+}
+
+.lista-amigos-container2 {
+    box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    cursor: default;
+    border-radius: 16px;
+    left: 588px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 330px;
+    border: 3px solid #db552c;
+    background-color: #e9dad5;
+    top: 60px;
+    width: 704px;
+    height: 550px;
+}
+
+a {
+    font-family: Raleway, serif;
+	color: #f1f1f1;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .lista-amigos-container, .lista-amigos-container2 {
+    animation: slideIn 0.3s ease-in-out forwards; 
+  }
