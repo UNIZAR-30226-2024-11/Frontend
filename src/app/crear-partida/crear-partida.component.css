@@ -44,6 +44,7 @@ a {
 }
 
 .codigo-sala-wraper2 {
+    box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
     border-radius: 16px;
     text-align: center;
@@ -139,6 +140,7 @@ a {
 }
 
 .lista-jugadores-container2 {
+    box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
     border-radius: 16px;
     text-align: center;
@@ -151,3 +153,53 @@ a {
     height: 550px;
 }
 
+/* ---------------------------------------------- */ 
+/*                 BOTÓN CONFIRMAR                */
+/* ---------------------------------------------- */ 
+
+.btn-confirmar {
+    font-family: Raleway, serif;
+	font-size: 30px;
+	font-weight: 600;
+    text-align: center;
+    color:#f1f1f1;
+    position: absolute;
+    vertical-align: middle;
+    line-height: 100px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #5ba149; 
+    border: 2px solid #469233;
+    top: 650px;
+    width: 400px;
+    height: 100px;
+    box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.1);
+			background: #6dbb5a;
+		}
+}
+
+/* ---------------------------------------------- */ 
+/*                 BOTÓN CONFIRMAR                */
+/* ---------------------------------------------- */ 
+
+.btn-invitar {
+    font-family: Raleway, serif;
+	font-size: 30px;
+	font-weight: 600;
+    text-align: center;
+    color:#f1f1f1;
+    position: absolute;
+    vertical-align: middle;
+    line-height: 100px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #ac2779; 
+    border: 2px solid #962269;
+    top: 650px;
+    right: 1390px;
+    width: 400px;
+    height: 100px;
+}
