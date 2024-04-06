@@ -162,6 +162,7 @@ a {
 	font-size: 30px;
 	font-weight: 600;
     text-align: center;
+    cursor: pointer;
     color:#f1f1f1;
     position: absolute;
     vertical-align: middle;
@@ -170,26 +171,27 @@ a {
     background-color: #5ba149; 
     border: 2px solid #469233;
     top: 650px;
-    width: 400px;
+    width: 700px;
     height: 100px;
     box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.1);
 		text-decoration: none;
 		will-change: color, text-shadow, font-size;
 		transition: ease all 0.3s;
 		&:hover {
-			transform: scale(1.1);
+			transform: scale(1.05);
 			background: #6dbb5a;
 		}
 }
 
 /* ---------------------------------------------- */ 
-/*                 BOTÓN CONFIRMAR                */
+/*                 BOTÓN COMENZAR                 */
 /* ---------------------------------------------- */ 
 
 .btn-invitar {
     font-family: Raleway, serif;
 	font-size: 30px;
 	font-weight: 600;
+    cursor: pointer;
     text-align: center;
     color:#f1f1f1;
     position: absolute;
@@ -202,4 +204,44 @@ a {
     right: 1390px;
     width: 400px;
     height: 100px;
+    text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			background: #be3b8c;
+		}
+}
+
+/* ---------------------------------------------- */ 
+/*                      REGLAS                    */
+/* ---------------------------------------------- */ 
+
+.reglas-container {
+    text-align: center;
+    color:#f1f1f1;
+    position: absolute;
+    vertical-align: middle;
+    line-height: 100px;
+    border-radius: 15px 15px 0px 0px;
+    background-color: #5b28ad;
+    top: 60px;
+    left: 1300px;
+    width: 425px;
+    height: 100px;
+}
+
+.reglas-container2 {
+    box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    border-radius: 16px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 330px;
+    border: 3px solid #5b28ad;
+    background-color: #e4dbf1;
+    top: 60px;
+    left: 1300px;
+    width: 422px;
+    height: 685px;
 }

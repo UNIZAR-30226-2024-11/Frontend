@@ -130,18 +130,26 @@
 <div class="lista-jugadores-wraper">
     <div class="lista-jugadores-container2"></div>
     <div class="lista-jugadores-container">
-        <a>JUGADORES</a> 
+        <a>JUGADORES</a>
         <a style="font-size: 40px; margin-left: 30px;">{{numJugadores}}/4</a>
+    </div>
+    <div class="reglas-container2"></div>
+    <div class="reglas-container">
+        <a>REGLAS</a>
     </div>
 </div>
 
 <div class="pantalla2">
     <div class="codigo-sala-wraper2">
-        <a style="color: #333; font-size: 55px;" (click)="copiarAlPortapapeles(codigoSala)" >{{codigoSala}}</a>
+        <a style="color: #333; font-size: 55px;" (click)="copiarAlPortapapeles(codigoSala)">{{codigoSala}}</a>
     </div>
     <div class="codigo-sala-wraper">
         <a>CÓDIGO DE SALA</a>
     </div>
-    <button class="btn-confirmar" href="#crear-partida">CONFIRMAR</button>
-    <button class="btn-invitar">INVITAR AMIGOS</button>
+    <button class="btn-confirmar" href="#crear-partida">COMENZAR PARTIDA</button>
+    <button class="btn-invitar" (click)="openAmigos()">INVITAR AMIGOS</button>
+</div>
+
+<div *ngIf="show_friendlist">
+    <app-amigos-popup></app-amigos-popup>
 </div>
