@@ -193,6 +193,21 @@ body {
 			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
 		}
 	}
+	i {
+        background: rgb(241, 217, 229);
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px grey;
+        font-size: 25px;
+        text-align: center;
+        margin-right: 10px;
+        border-radius:50%;
+        display:inline-block;
+    }
+
+    img{
+        width: 150px; /* Ancho deseado de la imagen */
+        height: 150px; /* Alto deseado de la imagen */
+    }
 }
 
 .caja {

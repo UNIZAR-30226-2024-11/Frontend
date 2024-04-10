@@ -10,11 +10,6 @@ import { FlujoComponent } from '../flujo/flujo.component';
   styleUrl: './shop.component.css'
 })
 export class ShopComponent {
-  constructor(private router: Router) {}
-
-  btnClick() {
-    this.router.navigate(['home']); 
-  } 
 
   logos: boolean[] = [false, false, false, false, false];
   fondos: boolean[] = [false, false, false, false];
