@@ -208,6 +208,42 @@
 
         </div>
     </nav>
+
+    <nav class="titulos">
+        <div class="ap">
+            <h2>BARAJAS</h2>
+        </div>
+    </nav>
+
+    <nav class="cartas">
+        <div class="caja3">
+            <img src="assets/tapete1.PNG" width="150">
+            <p>BARAJA1</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarBaraja(barajasValor, monedas, 0)">{{getTextoFondos(0)}}</h4>
+        </div>
+        <div class="caja3">
+            <img src="assets/tapete2.PNG" width="150">
+            <p>BARAJA2</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarBaraja(barajasValor, monedas, 1)">{{getTextoFondos(1)}}</h4>
+        </div>
+        <div class="caja3">
+            <img src="assets/tapete3.PNG" width="150">
+            <p>BARAJA3</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarBaraja(barajasValor, monedas, 2)">{{getTextoFondos(2)}}</h4>
+        </div>
+        <div class="caja3">
+            <img src="assets/tapete4.PNG" width="150">
+            <p>BARAJA4</p>
+            <p>{{fondosValor}} MONEDAS</p>
+            <h4 (click)="comprarBaraja(barajasValor, monedas, 3)">{{getTextoFondos(3)}}</h4>
+
+        </div>
+    </nav>
+
+
     <nav class="titulos">
         <div class="titulo"><h6>Tus monedas son: {{ monedas }}</h6></div>
     </nav>

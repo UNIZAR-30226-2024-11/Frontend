@@ -17,10 +17,13 @@ export class ShopComponent {
 
   logos: boolean[] = [false, false, false, false, false];
   fondos: boolean[] = [false, false, false, false];
+  barajas: boolean[] = [false, false, false, false];
   seleccionLogo: boolean[] = [false, false, false, false, false];
   seleccionFondo: boolean[] = [false, false, false, false];
+  seleccionBaraja: boolean[] = [false, false, false, false];
   logosValor = 50;
   fondosValor = 100;
+  barajasValor = 150;
   monedas = 300;
 
   comprarLogo(logosValor: number, monedas: number, i: number) {
@@ -29,7 +32,7 @@ export class ShopComponent {
     }
     else if (monedas >= logosValor) {
         this.logos[i] = true;
-        monedas = monedas - logosValor;
+        this.monedas = monedas - logosValor;
         return monedas;
     } else {
         return monedas;
@@ -43,6 +46,19 @@ export class ShopComponent {
     else if (monedas >= fondosValor) {
         this.fondos[i] = true;
         this.monedas = monedas - fondosValor;
+        return monedas;
+    } else {
+        return monedas;
+    }
+  }
+
+  comprarBaraja(barajasValor: number, monedas: number, i: number) {
+    if (this.barajas[i] == true){    
+      return monedas;
+    }
+    else if (monedas >= barajasValor) {
+        this.barajas[i] = true;
+        this.monedas = monedas - barajasValor;
         return monedas;
     } else {
         return monedas;
