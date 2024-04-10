@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FlujoComponent } from '../flujo/flujo.component';
+//import { FlujoComponent } from '../flujo/flujo.component';
 
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [FlujoComponent],
+  imports: [],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
