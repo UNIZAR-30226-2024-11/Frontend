@@ -19,7 +19,7 @@ export class RegisterComponent {
   password: string = '';
   password_confirm: string = '';
   passwordsMatch: boolean = true;
-  private apiURL = 'http://localhost:5432'; 
+  private apiURL = 'https://backend-eg2q.onrender.com:10000'; 
 
   constructor(private router: Router,
               private cookieService: CookieService,

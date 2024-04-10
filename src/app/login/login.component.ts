@@ -18,25 +18,28 @@ export class LoginComponent {
 
   correo: string = '';
   password: string = '';
-  private apiURL = 'http://localhost:5432'; 
+  private apiURL = 'https://backend-eg2q.onrender.com:10000';
 
   constructor(private router: Router,
-              private cookieService: CookieService,
-              private http: HttpClient) { }
+    private cookieService: CookieService,
+    private http: HttpClient) { }
 
-  login() {
-    this.http.post<any>(`${this.apiURL}/login`, { email: this.correo, password: this.password })
-      .subscribe(response => {
-        if (response.token) {
-          // Autenticación válida
-          this.cookieService.set('token', response.token);
-          this.router.navigate(['/home']);
-        } else {
-          // Error de autenticación
-          console.error('Error en la autenticación del usuario', response.error);
-        }
-      }, error => {
-        console.error('Error en la solicitud HTTP:', error);
-      });
-  }
+    login() {
+      this.http.post<any>(`${this.apiURL}/login`, { email: this.correo, password: this.password })
+        .subscribe({
+          next: (response) => {
+            if (response.token) {
+              // Autenticación válida
+              this.cookieService.set('token', response.token);
+              this.router.navigate(['/home']);
+            } else {
+              // Error de autenticación
+              console.error('Error en la autenticación del usuario', response.error);
+            }
+          },
+          error: (error) => {
+            console.error('Error en la solicitud HTTP:', error);
+          }
+        });
+    }
 }
