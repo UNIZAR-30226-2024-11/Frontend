@@ -19,13 +19,14 @@ export class RegisterComponent {
   password: string = '';
   password_confirm: string = '';
   passwordsMatch: boolean = true;
-  private apiURL = 'https://backend-eg2q.onrender.com:10000'; 
+  private apiURL = 'https://backend-eg2q.onrender.com/api/'; 
 
   constructor(private router: Router,
               private cookieService: CookieService,
               private http: HttpClient) { }
 
   register() {
+    console.log("Registrarse con: ", this.correo, " y contraseña:", this.password, " y usuario: ", this.usuario);
     if (this.password == this.password_confirm){
       this.passwordsMatch = true;
       this.http.post<any>(`${this.apiURL}/register`, { username: this.usuario,  email: this.correo, 
