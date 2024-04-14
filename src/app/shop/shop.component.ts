@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
 import { DialogoConfirmacionComponent } from './dialogo-confirmacion/dialogo-confirmacion.component';
+import { FlujoComponent } from './flujo/flujo.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [DialogoConfirmacionComponent],
+  imports: [DialogoConfirmacionComponent, FlujoComponent, HomeComponent],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })

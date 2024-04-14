@@ -1,0 +1,12 @@
+i {
+    background: rgb(193, 185, 238);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px grey;
+    font-size: 25px;
+    margin-right: 10px;
+    border-radius:50%;
+    display:inline-block;
+    padding:20px;
+    margin-top: -70px;
+    margin-left: -700px;
+  }
