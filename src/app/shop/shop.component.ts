@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DialogoConfirmacionComponent } from './dialogo-confirmacion/dialogo-confirmacion.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [],
+  imports: [DialogoConfirmacionComponent],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
-export class ShopComponent {
-  constructor(private router: Router) {}
 
-  btnClick() {
-    this.router.navigate(['home']); 
-  } 
+export class ShopComponent { 
 
   logos: boolean[] = [false, false, false, false, false];
   fondos: boolean[] = [false, false, false, false];
@@ -111,5 +109,50 @@ export class ShopComponent {
     else {
       return 'COMPRAR';
     }
+  }
+
+  constructor(public dialogo: MatDialog) {}
+
+  mostrarDialogoLogo(i: number): void {
+    this.dialogo
+      .open(DialogoConfirmacionComponent, {
+        data: `¿Quieres comprar este logo de perfil?`
+      })
+      .afterClosed()
+      .subscribe((confirmado: Boolean) => {
+        if (confirmado) {
+          this.comprarLogo(this.logosValor, this.monedas, i);
+        } else {
+        }
+      });
+  }
+
+
+  mostrarDialogoFondo(i: number): void {
+    this.dialogo
+      .open(DialogoConfirmacionComponent, {
+        data: `¿Quieres comprar este fondo de tablero?`
+      })
+      .afterClosed()
+      .subscribe((confirmado: Boolean) => {
+        if (confirmado) {
+          this.comprarFondo(this.fondosValor, this.monedas, i);
+        } else {
+        }
+      });
+  }
+
+  mostrarDialogoBaraja(i: number): void {
+    this.dialogo
+      .open(DialogoConfirmacionComponent, {
+        data: `¿Quieres comprar esta baraja?`
+      })
+      .afterClosed()
+      .subscribe((confirmado: Boolean) => {
+        if (confirmado) {
+          this.comprarFondo(this.barajasValor, this.monedas, i);
+        } else {
+        }
+      });
   }
 }

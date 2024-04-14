@@ -1,0 +1,8 @@
+<h1 class="titulo" mat-dialog-title>Confirme su compra</h1>
+<div class="mensaje"mat-dialog-content>
+    <p>{{mensaje}}</p>
+</div>
+<div mat-dialog-actions>
+    <button class="No" mat-button (click)="cerrarDialogo()">No</button>
+    <button class="Si" mat-button (click)="confirmado()">Sí</button>
+</div>
