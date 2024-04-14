@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LevelComponent } from './level/level.component';
 import { UserComponent } from './user/user.component';
-import { FlujoComponent } from '../flujo/flujo.component';
+import { FlujoComponent } from '../shop/flujo/flujo.component';
 import { InfoJugadorComponent } from './info-jugador/info-jugador.component';
 
 @Component({
