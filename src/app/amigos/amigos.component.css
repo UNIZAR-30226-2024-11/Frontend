@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+body {
+	background: #f7f7f7;
+}
+
+.pantalla {
+    position: fixed;
+    background: #f2f2f2;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.pantalla2 {
+    position: fixed;
+    height: 98vh;
+    width: 98vw;
+    overflow: hidden;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	z-index: 5;
+	position: relative;
+	.logo {
+		margin: 0 auto;
+		margin-bottom: 10vw;
+        border: 5px solid;
+        border-color: #333;
+		max-width: 250px;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 25%;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.scroller {
+    position: relative;
+    left: -400px;
+    bottom: 250px;
+    margin-top: 75px;
+}
+
+.displaced {
+    left: -200px;
+    bottom: 150px;
+}
+
+.scroller__inner {
+    animation: scroll 20s linear infinite;
+    gap: 200px;
+    display: inline-flex;
+    rotate: 22.5deg;
+
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(-31.5%);
+  }  
+} 
+
+.contorno_UNO {
+    opacity: 0.6;
+    width: 90px; 
+    height: 30px; 
+    border-radius: 12px; 
+    padding: 20px;
+}
+
+.UNO_blue {
+    border: 7px solid #3498db;
+    background-color: #3498db;
+}
+
+.UNO_red {
+    border: 7px solid #c22b2b;
+    background-color: #c22b2b;
+}
+
+.UNO_green {
+    border: 7px solid #457e16;
+    background-color: #457e16;
+}
+
+.UNO_yellow {
+    border: 7px solid #e2a90c;
+    background-color: #e2a90c;
+}
+
+.titulo{
+    text-align: center; 
+    font-family: Arial; 
+    font-size: 80px; 
+    COLOR: #360d2a; 
+    text-shadow: 0px 0px 9px #bd50d3;
+    top: 1500px;
+    left: 500px;
+	h1{
+		font-size: 60px;
+	}
+}
+
+.titulos {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+    top: 15px;
+	position:relative;
+	a {
+		font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		/*margin: 1vh auto;*/
+		padding: 2.5vh 0;
+		width: 80%;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+	}
+}
+
+.secciones {
+	display: flex;
+	flex-direction:row;
+	width: 100%;
+	grid-area: 1/1/2/2;
+	position: relative;
+	justify-content: center;
+}
+
+.altura1{
+    display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+
+.altura2{
+    display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+    div {
+        width: 400px;
+        height: 300px;
+        border-color: #333;
+        color: #333;
+        border-radius: 15px;
+        border: 3px solid;
+        position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+        background-color: rgba(84, 43, 43, 0.3);
+    }
+}
+
+.buscar_amigos {
+    border: 3px solid black;
+    padding: 10px;
+    width: 500px;
+    height: 590px;
+    margin: 20px;
+	border-radius: 10px;
+    margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(70px);
+	text-align: center;
+    p {
+		font-family: Raleway, serif;
+		color: #333;
+        top: -15px;
+		font-size: 33px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 95%;
+	}
+	h4{
+		font-family: Raleway, serif;
+		color: #333;
+        top: -8px;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+        left: 5px;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 100px;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			background: rgba(4, 141, 27, 0.8);
+			box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
+    input[type="text"] {
+        width:310px;
+        height: 50px;
+        font-size: 20px;
+        font-family: Raleway, serif;
+		color: #333;
+        font-weight: 500;
+        border-color: #333;
+        border-radius: 15px;
+        border: 3px solid;
+    }
+}
+
+.lista_amigos {
+    border: 3px solid black;
+    padding: 10px;
+    width: 500px;
+    height: 590px;
+    margin: 20px;
+	border-radius: 10px;
+    margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(70px);
+	text-align: center;
+    p {
+		font-family: Raleway, serif;
+		color: #333;
+        top: -15px;
+		font-size: 33px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 95%;
+	}
+	h4{
+		font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+        left: 150px;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 100px;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			background: rgba(4, 141, 27, 0.8);
+			box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+.solicitudes {
+    border: 3px solid black;
+    padding: 10px;
+    width: 500px;
+    height: 590px;
+    margin: 20px;
+	border-radius: 10px;
+    margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(70px);
+	text-align: center;
+    p {
+		font-family: Raleway, serif;
+		color: #333;
+        top: -15px;
+		font-size: 33px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 95%;
+	}
+	h4{
+		font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+        left: 150px;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 100px;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			background: rgba(4, 141, 27, 0.8);
+			box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
+}
