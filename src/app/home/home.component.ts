@@ -4,11 +4,12 @@ import { UserComponent } from '../profile/user/user.component';
 import { LevelComponent } from '../profile/level/level.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { ShopComponent } from '../shop/shop.component';
+import { AmigosComponent } from './amigos/amigos.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [UserComponent, LevelComponent, TiendaComponent, ShopComponent],
+  imports: [UserComponent, LevelComponent, TiendaComponent, ShopComponent, AmigosComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
