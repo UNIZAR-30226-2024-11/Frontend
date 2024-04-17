@@ -143,16 +143,15 @@
         <div class="buscar_amigos">
             <p>BUSCAR AMIGOS</p>
             <nav class="altura1">
-                <input type="text" placeholder="Introduce el nombre de usuario">
-                <h4>Buscar</h4>
+                <input type="text" [(ngModel)]="nombreUsuario" placeholder="Introduce el nombre de usuario">
+                <h4 (click)="verificarNombre()">Buscar</h4>
             </nav>
             <nav class="altura2">
                 <div class="amigo">
-                    <p>nombreAmigo</p>
-                    <h4>ENVIAR SOLICITUD</h4>
+                    <p>{{respuesta}}</p>
+                    <h3 *ngIf="usuarioCorrecto == respuesta || ''">ENVIAR SOLICITUD</h3>
                 </div>
             </nav>
-
         </div>
 
         <div class="solicitudes">
@@ -160,4 +159,7 @@
             <h4>SECCION3</h4>
         </div>
     </nav>
+    <div class="flujo2">
+        <a href="#home"><app-flujo></app-flujo></a>
+    </div>
 </div>
