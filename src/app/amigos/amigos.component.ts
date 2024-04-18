@@ -17,6 +17,8 @@ export class AmigosComponent {
   usuarioCorrecto: string = '';
   noEncontrado: string = 'No se ha encontrado el usuario';
   mensaje: string = '';
+  solicitudes: string[] = ['Laura', 'Martín', 'Pablo', 'Carlos', 'Rafael'];
+  amigos: string[] = ['Álvaro', 'Ana', 'David'];
 
   verificarNombre() {
     // Verificar si el nombre introducido por el usuario está en la lista de nombres
@@ -29,5 +31,22 @@ export class AmigosComponent {
       this.respuesta = this.mensaje // Ocultar el panel si no se encuentra el nombre
     }
   }
+
+  constructor() { }
+
+    ngOnInit(): void {
+    }
+
+    aceptarSolicitud(solicitud: string): void {
+        // Agregar la solicitud a la lista de amigos
+        this.amigos.push(solicitud);
+        // Eliminar la solicitud de la lista
+        this.solicitudes = this.solicitudes.filter(item => item !== solicitud);
+    }
+
+    rechazarSolicitud(solicitud: string): void {
+        // Eliminar la solicitud de la lista
+        this.solicitudes = this.solicitudes.filter(item => item !== solicitud);
+    }
 
 }

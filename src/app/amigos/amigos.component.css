@@ -305,6 +305,29 @@ body {
 			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
 		}
 	}
+	h3{
+		font-family: Raleway, serif;
+		color: #333;
+        top: -8px;
+		left: -30px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 400px;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+	}
 }
 
 .solicitudes {
@@ -337,7 +360,8 @@ body {
 		cursor: pointer;
 		font-size: 20px;
 		font-weight: 700;
-        left: 150px;
+        left: -270px;
+		top: -8px;
 		line-height: 1;
 		position: relative;
 		text-align: center;
@@ -361,6 +385,79 @@ body {
 			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
 		}
 	}
+	h5{
+		font-family: Raleway, serif;
+		color: #333;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 700;
+        left: -265px;
+		top: -8px;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 120px;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+		transition: ease all 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			background: rgba(4, 141, 27, 0.8);
+			box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
+	h3{
+		font-family: Raleway, serif;
+		color: #333;
+        top: -8px;
+		left: -30px;
+		margin-top: 0px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		text-align: start;
+		margin: 1vh auto;
+		padding: 2.5vh 0;
+		width: 420px;
+		height: 30px;
+        border: 3px solid;
+        border-color: #333;
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(70px);
+		border-radius: 10px;
+		box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+			3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		will-change: color, text-shadow, font-size;
+	}
+}
+
+.solicitudes li {
+    display:inline-flex; /* Establecer el diseño en línea */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.barra{
+	overflow-y:inherit;
+	overflow-x: hidden;
+	max-height: 350px;
+}
+
+.barra2{
+	overflow-y:inherit;
+	overflow-x: hidden;
+	max-height: 350px;
 }
 
 .flujo2 {
