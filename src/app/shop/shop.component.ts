@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+/**
+ * Componente para la tienda de la aplicación.
+ */
 @Component({
   selector: 'app-shop',
   standalone: true,
@@ -11,6 +14,10 @@ import { Router } from '@angular/router';
 export class ShopComponent {
   constructor(private router: Router) {}
 
+  /**
+   * Método para manejar el clic del botón.
+   * Navega a la ruta 'home'.
+   */
   btnClick() {
     this.router.navigate(['home']); 
   } 
@@ -23,6 +30,13 @@ export class ShopComponent {
   fondosValor = 100;
   monedas = 300;
 
+  /**
+   * Método para comprar un logo.
+   * @param logosValor El valor del logo a comprar.
+   * @param monedas El número de monedas del usuario.
+   * @param i El índice del logo.
+   * @returns El número actualizado de monedas después de la compra.
+   */
   comprarLogo(logosValor: number, monedas: number, i: number) {
     if (this.logos[i] == true){    
       return monedas;
@@ -36,6 +50,13 @@ export class ShopComponent {
     }
   }
 
+  /**
+   * Método para comprar un fondo.
+   * @param fondosValor El valor del fondo a comprar.
+   * @param monedas El número de monedas del usuario.
+   * @param i El índice del fondo.
+   * @returns El número actualizado de monedas después de la compra.
+   */
   comprarFondo(fondosValor: number, monedas: number, i: number) {
     if (this.fondos[i] == true){    
       return monedas;
@@ -49,6 +70,11 @@ export class ShopComponent {
     }
   }
 
+  /**
+   * Método para obtener el texto de los botones de los logos.
+   * @param i El índice del logo.
+   * @returns El texto del botón correspondiente al logo.
+   */
   getTextoLogos(i: number){
     let encontrado = false;
     for(let i = 0; i < this.seleccionLogo.length; i++){
@@ -73,6 +99,11 @@ export class ShopComponent {
     }
   }
 
+  /**
+   * Método para obtener el texto de los botones de los fondos.
+   * @param i El índice del fondo.
+   * @returns El texto del botón correspondiente al fondo.
+   */
   getTextoFondos(i: number){
     let encontrado = false;
     for(let i = 0; i < this.seleccionFondo.length; i++){
