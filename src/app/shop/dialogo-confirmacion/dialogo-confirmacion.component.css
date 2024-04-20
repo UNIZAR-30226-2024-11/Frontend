@@ -1,0 +1,45 @@
+/* Estilos para el diálogo de confirmación */
+
+.titulo {
+    font-family: 'Raleway', serif; /* Fuente Raleway para el título */
+  }
+  
+  .mensaje {
+    font-family: 'Raleway', serif; /* Fuente Raleway para el mensaje */
+  }
+  
+  .No,
+  .Si {
+    font-family: 'Raleway', serif; /* Fuente Raleway para los botones */
+    top: 500 px;
+  }
+
+  .mat-dialog-container {
+    max-width: 1000px; /* Ancho máximo del diálogo */
+  }
+  
+  .mat-dialog-title {
+    font-size: 2rem; /* Tamaño de fuente del título */
+  }
+  
+  .mat-dialog-content {
+    font-size: 1.2rem; /* Tamaño de fuente del contenido */
+    margin-bottom: 30px; /* Espacio inferior */
+  }
+  
+  .mat-dialog-actions {
+    justify-content: center; /* Centrar horizontalmente los botones */
+  }
+  
+  .mat-dialog-actions button {
+    margin-left: 15px; /* Espacio entre los botones */
+    font-size: 1.2rem; /* Tamaño de fuente de los botones */
+    padding: 10px 25px; /* Padding (espaciado interno) de los botones */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  .mat-dialog-actions button:hover {
+    background-color: #f0f0f0; /* Cambio de color al pasar el ratón */
+  }
+  
+  
