@@ -4,11 +4,14 @@ import { HomeComponent } from '../home/home.component';
 import { DialogoConfirmacionComponent } from './dialogo-confirmacion/dialogo-confirmacion.component';
 import { FlujoComponent } from './flujo/flujo.component';
 import { MatDialog } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [DialogoConfirmacionComponent, FlujoComponent, HomeComponent],
+  imports: [DialogoConfirmacionComponent, FlujoComponent, HomeComponent, FormsModule, CommonModule],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
@@ -21,21 +24,46 @@ export class ShopComponent {
   seleccionLogo: boolean[] = [false, false, false, false, false];
   seleccionFondo: boolean[] = [false, false, false, false];
   seleccionBaraja: boolean[] = [false, false, false, false];
+  mensaje: string = 'SELECCIONADO'
   logosValor = 50;
   fondosValor = 100;
   barajasValor = 150;
   monedas = 300;
 
   comprarLogo(logosValor: number, monedas: number, i: number) {
-    if (this.logos[i] == true){    
+    if (this.logos[i] == false && monedas >= logosValor) {
+      this.logos[i] = true;
+      this.monedas = monedas - logosValor;
       return monedas;
     }
-    else if (monedas >= logosValor) {
-        this.logos[i] = true;
-        this.monedas = monedas - logosValor;
-        return monedas;
-    } else {
-        return monedas;
+    else{
+      return monedas;
+    }
+  }
+
+  getTextoLogos(i: number, logos: boolean[], seleccionLogo: boolean[]){
+    if (logos[i] == true && seleccionLogo[i] == false) {
+      return 'SELECCIONAR';
+    } 
+    if (logos[i] == false && seleccionLogo[i] == false) {
+      return 'COMPRAR';
+    }
+    else {
+      return this.mensaje;
+    }
+  }
+
+  seleccionarLogo(i: number, logos: boolean[], seleccionLogo: boolean[]) {
+    if (this.getTextoLogos(i, logos, seleccionLogo) == 'SELECCIONADO') {
+        seleccionLogo[i] = false;
+        this.getTextoLogos(i, logos, seleccionLogo) 
+    }
+    else if (this.getTextoLogos(i, logos, seleccionLogo) == 'SELECCIONAR') {
+      // Primero, deseleccionamos todos los logos
+      seleccionLogo.fill(false);
+      // Luego, marcamos como seleccionado el logo en la posición i
+      seleccionLogo[i] = true;
+      this.getTextoLogos(i, logos, seleccionLogo) 
     }
   }
 
@@ -65,30 +93,6 @@ export class ShopComponent {
     }
   }
 
-  getTextoLogos(i: number){
-    let encontrado = false;
-    for(let i = 0; i < this.seleccionLogo.length; i++){
-      if (this.seleccionLogo[i] == false){
-        encontrado = false;
-      }
-      else{
-        encontrado = true;
-      }
-    }
-    if (this.logos[i] = false){
-      return 'COMPRAR';
-    }
-    else if(this.logos[i] == true && !encontrado){
-      return 'SELECCIONADO';
-    }
-    else if(this.logos[i] = true && encontrado) {
-        return 'SELECCIONAR';
-    }
-    else {
-      return 'COMPRAR'
-    }
-  }
-
   getTextoFondos(i: number){
     let encontrado = false;
     for(let i = 0; i < this.seleccionFondo.length; i++){
@@ -113,20 +117,43 @@ export class ShopComponent {
     }
   }
 
+  getTextoBarajas(i: number){
+    let encontrado = false;
+    for(let i = 0; i < this.seleccionBaraja.length; i++){
+      if (this.seleccionBaraja[i] == false){
+        encontrado = false;
+      }
+      else{
+        encontrado = true;
+      }
+    }
+    if (this.barajas[i] = false){
+      return 'COMPRAR';
+    }
+    else if(this.barajas[i] == true && !encontrado){
+      return 'SELECCIONADO';
+    }
+    else if(this.barajas[i] = true && encontrado){
+        return 'SELECCIONAR';
+    }
+    else {
+      return 'COMPRAR';
+    }
+  }
+
   constructor(public dialogo: MatDialog) {}
 
   mostrarDialogoLogo(i: number): void {
-    this.dialogo
-      .open(DialogoConfirmacionComponent, {
-        data: `¿Quieres comprar este logo de perfil?`
-      })
-      .afterClosed()
-      .subscribe((confirmado: Boolean) => {
-        if (confirmado) {
-          this.comprarLogo(this.logosValor, this.monedas, i);
-        } else {
-        }
-      });
+    this.dialogo.open(DialogoConfirmacionComponent, {
+      data: `¿Quieres comprar este logo de perfil?`
+    })
+    .afterClosed()
+    .subscribe((confirmado: Boolean) => {
+      if (confirmado) {
+        this.comprarLogo(this.logosValor, this.monedas, i);
+      } 
+      else {}
+    });
   }
 
 

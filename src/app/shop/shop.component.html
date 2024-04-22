@@ -142,31 +142,41 @@
             <img src="assets/perfil1.png" width="150">
             <p>LOGO1</p>
             <p>{{logosValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoLogo(0)">{{getTextoLogos(0)}}</h4>
+            <h4 *ngIf="getTextoLogos(0, logos, seleccionLogo) == 'COMPRAR'" (click)="mostrarDialogoLogo(0)">COMPRAR</h4>
+            <h4 *ngIf="getTextoLogos(0, logos, seleccionLogo) == 'SELECCIONAR'" (click)="seleccionarLogo(0, logos, seleccionLogo)">SELECCIONAR</h4>
+            <h4 *ngIf="getTextoLogos(0, logos, seleccionLogo) == 'SELECCIONADO'" (click)="seleccionarLogo(0, logos, seleccionLogo)">SELECCIONADO</h4>
         </div>
         <div class="caja">
             <i><img src="assets/perfil2.png" width="150"></i>
             <p>LOGO2</p>
             <p>{{logosValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoLogo(1)">{{getTextoLogos(1)}}</h4>
+            <h4 *ngIf="getTextoLogos(1, logos, seleccionLogo) == 'COMPRAR'" (click)="mostrarDialogoLogo(1)">COMPRAR</h4>
+            <h4 *ngIf="getTextoLogos(1, logos, seleccionLogo) == 'SELECCIONAR'" (click)="seleccionarLogo(1, logos, seleccionLogo)">SELECCIONAR</h4>
+            <h4 *ngIf="getTextoLogos(1, logos, seleccionLogo) == 'SELECCIONADO'" (click)="seleccionarLogo(1, logos, seleccionLogo)">SELECCIONADO</h4>
         </div>
         <div class="caja">
             <img src="assets/perfil3.png" width="150">
             <p>LOGO3</p>
             <p>{{logosValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoLogo(2)">{{getTextoLogos(2)}}</h4>
+            <h4 *ngIf="getTextoLogos(2, logos, seleccionLogo) == 'COMPRAR'" (click)="mostrarDialogoLogo(2)">COMPRAR</h4>
+            <h4 *ngIf="getTextoLogos(2, logos, seleccionLogo) == 'SELECCIONAR'" (click)="seleccionarLogo(2, logos, seleccionLogo)">SELECCIONAR</h4>
+            <h4 *ngIf="getTextoLogos(2, logos, seleccionLogo) == 'SELECCIONADO'" (click)="seleccionarLogo(2, logos, seleccionLogo)">SELECCIONADO</h4>
         </div>
         <div class="caja">
             <img src="assets/perfil4.png" width="150">
             <p>LOGO4</p>
             <p>{{logosValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoLogo(3)">{{getTextoLogos(3)}}</h4>
+            <h4 *ngIf="getTextoLogos(3, logos, seleccionLogo) == 'COMPRAR'" (click)="mostrarDialogoLogo(3)">COMPRAR</h4>
+            <h4 *ngIf="getTextoLogos(3, logos, seleccionLogo) == 'SELECCIONAR'" (click)="seleccionarLogo(3, logos, seleccionLogo)">SELECCIONAR</h4>
+            <h4 *ngIf="getTextoLogos(3, logos, seleccionLogo) == 'SELECCIONADO'" (click)="seleccionarLogo(3, logos, seleccionLogo)">SELECCIONADO</h4>
         </div>
         <div class="caja">
             <img src="assets/perfil5.png" width="150">
             <p>LOGO5</p>
             <p>{{logosValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoLogo(4)">{{getTextoLogos(4)}}</h4>
+            <h4 *ngIf="getTextoLogos(4, logos, seleccionLogo) == 'COMPRAR'" (click)="mostrarDialogoLogo(4)">COMPRAR</h4>
+            <h4 *ngIf="getTextoLogos(4, logos, seleccionLogo) == 'SELECCIONAR'" (click)="seleccionarLogo(4, logos, seleccionLogo)">SELECCIONAR</h4>
+            <h4 *ngIf="getTextoLogos(4, logos, seleccionLogo) == 'SELECCIONADO'" (click)="seleccionarLogo(4, logos, seleccionLogo)">SELECCIONADO</h4>
         </div>
     </nav>
 
@@ -215,25 +225,25 @@
             <img src="assets/tapete1.PNG" width="150">
             <p>BARAJA1</p>
             <p>{{barajasValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoFondos(0)}}</h4>
+            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoBarajas(0)}}</h4>
         </div>
         <div class="caja3">
             <img src="assets/tapete2.PNG" width="150">
             <p>BARAJA2</p>
             <p>{{barajasValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoFondos(1)}}</h4>
+            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoBarajas(1)}}</h4>
         </div>
         <div class="caja3">
             <img src="assets/tapete3.PNG" width="150">
             <p>BARAJA3</p>
             <p>{{barajasValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoFondos(2)}}</h4>
+            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoBarajas(2)}}</h4>
         </div>
         <div class="caja3">
             <img src="assets/tapete4.PNG" width="150">
             <p>BARAJA4</p>
             <p>{{barajasValor}} MONEDAS</p>
-            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoFondos(3)}}</h4>
+            <h4 (click)="mostrarDialogoBaraja(0)">{{getTextoBarajas(3)}}</h4>
 
         </div>
     </nav>
