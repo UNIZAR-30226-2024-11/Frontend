@@ -1,4 +1,3 @@
-
 <div class="pantalla">
     <div class="scroller">
         <ul class="lista-unos scroller__inner">
@@ -128,24 +127,49 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="tienda_wraper">
-        <a href="#shop"><app-tienda></app-tienda></a>
+<div class="todo">
+    <nav class="titulos">
+        <div class="titulo">
+            <h1>AMIGOS</h1>
+        </div>
+    </nav>
+
+    <nav class="secciones">
+        <div class="lista_amigos">
+            <p>LISTA DE AMIGOS</p>
+            <ul class="barra">
+                <h3 *ngFor="let amigo of amigos">{{ amigo }}</h3>
+            </ul>
+        </div>
+
+        <div class="buscar_amigos">
+            <p>BUSCAR AMIGOS</p>
+            <nav class="altura1">
+                <input type="text" [(ngModel)]="nombreUsuario" placeholder="Introduce el nombre de usuario">
+                <h4 (click)="verificarNombre()">Buscar</h4>
+            </nav>
+            <nav class="altura2">
+                <div class="amigo">
+                    <p>{{respuesta}}</p>
+                    <h3 *ngIf="usuarioCorrecto == respuesta || ''">ENVIAR SOLICITUD</h3>
+                </div>
+            </nav>
+        </div>
+
+        <div class="solicitudes">
+            <p>SOLICITUDES DE AMISTAD</p>
+            <ul class="barra2">
+                <ng-container *ngFor="let solicitud of solicitudes">
+                    <li>
+                        <h3>{{ solicitud }}</h3>
+                        <h4 (click)="aceptarSolicitud(solicitud)">ACEPTAR</h4>
+                        <h5 (click)="rechazarSolicitud(solicitud)">RECHAZAR</h5>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </nav>
+    <div class="flujo2">
+        <a href="#home"><app-flujo></app-flujo></a>
     </div>
-    <div class="amigos_wraper">
-        <a href="#amigos"><app-amigos></app-amigos></a>
-    </div>
-    <div class="profile_wraper">
-        <a href="#profile"><app-user></app-user></a>
-        <app-level></app-level>
-    </div>
-	<div class="logo">
-		<img src="assets/Logotipo_centrado.png" alt="UnoGraham">
-	</div>
-	<nav class="menu">
-		<a href="#crear-partida">CREAR PARTIDA</a>
-		<a href="#portada">UNIRSE A PARTIDA</a>
-		<a href="#portada">TORNEO</a>
-	</nav>
-        <button type="button" class="logout_button" (click)="btnClick()">LOGOUT</button>
 </div>

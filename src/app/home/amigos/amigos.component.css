@@ -1,0 +1,17 @@
+i {
+    background: rgb(220, 217, 241);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px grey;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius:50%;
+    display:inline-block;
+}
+  
+img {
+    display:block;
+    width: 150px; /* Ancho deseado de la imagen */
+    height: 150px; /* Alto deseado de la imagen */
+    transform: scale(0.8);
+}

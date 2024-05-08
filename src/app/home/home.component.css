@@ -150,6 +150,12 @@ body {
     top: 6%;
 }
 
+.amigos_wraper {
+    position: absolute;
+    left: 130px;
+    top: 220px;
+}
+
 .scroller {
     position: relative;
     left: -400px;
