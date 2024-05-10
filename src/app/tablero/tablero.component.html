@@ -7,8 +7,11 @@
         <div class="title">CHAT</div>
         <div class="separator2"></div>
         <ul class="barra">
-            <h3 *ngFor="let mensaje of mensajes">{{ mensaje }}</h3>
+            <p *ngFor="let mensaje of mensajes">Usuario1: {{ mensaje }}</p>
         </ul>
-        <input type="text" placeholder="Escribe algo">
+        <nav class="chat">
+            <input type="text" placeholder="Escribe algo" [(ngModel)]="mensaje">
+            <h4 class="enviar" (click)="agnadirMensaje()">ENVIAR</h4>
+        </nav>
     </div>
 </div>

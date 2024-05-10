@@ -12,12 +12,16 @@ import { CommonModule } from '@angular/common';
 })
 export class TableroComponent {
   mensajes: string[] = [];
+  mensaje: string = '';
 
   constructor() { }
+
     ngOnInit(): void {
     }
-    añadirMensaje(mensaje: string): void {
+
+    agnadirMensaje(): void {
         // Agregar la solicitud a la lista de amigos
-        this.mensajes.push(mensaje);
+        this.mensajes.push(this.mensaje);
+        this.mensaje = '';
     }
 }
