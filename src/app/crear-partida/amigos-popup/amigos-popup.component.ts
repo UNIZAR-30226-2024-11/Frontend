@@ -12,6 +12,7 @@ import { CrearPartidaComponent } from '../crear-partida.component';
   styleUrl: './amigos-popup.component.css'
 })
 export class AmigosPopupComponent {
+  
 
   /**
    * Constructor del componente AmigosPopupComponent.
@@ -26,4 +27,6 @@ export class AmigosPopupComponent {
   closeAmigos_callback(){
      this.crearPartidaComp.closeAmigos();
   }
+
+
 }
