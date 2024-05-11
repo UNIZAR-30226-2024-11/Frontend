@@ -1,7 +1,16 @@
 <div class="lista-amigos-wraper" (click)="closeAmigos_callback()">
-    <a style="margin-left: 785px; line-height: 55px; font-size: 20px;">Pulsa en cualquier parte para salir</a>
-    <div class="lista-amigos-container2"></div>
-    <div class="lista-amigos-container">
-        <a>AMIGOS</a>
+<a style="margin-left: 785px; line-height: 55px; font-size: 20px;">Pulsa en cualquier parte para salir</a>
+</div>
+<div class="lista-amigos-container2"></div>
+<div class="lista-amigos-container">
+    <a>AMIGOS</a>
+</div>
+<div class="amigos">
+    {{nombre_amigo}} 
+    <div class="amigos_nivel_invitacion">
+        NIVEL: {{nivel_amigo}}
     </div>
+</div>
+<div class="invitacion" (click)="invitar()">
+    <img src="assets/carta.png" alt="Carta" width="40" height="40">
 </div>
