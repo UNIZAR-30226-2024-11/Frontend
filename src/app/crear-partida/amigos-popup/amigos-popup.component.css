@@ -60,3 +60,48 @@ a {
   .lista-amigos-container, .lista-amigos-container2 {
     animation: slideIn 0.3s ease-in-out forwards; 
   }
+
+
+/* REPRESENTACIÓN DE CADA AMIGO */
+
+.amigos {
+  text-align: left;
+  padding-left: 30px;
+  color:#f1f1f1;
+  line-height: 80px; 
+  font-size: 20px;
+  position: fixed;
+  cursor: default;
+  vertical-align: middle;
+  left: 605px;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #db552c;
+  top: 185px;
+  width: 636px;
+  height: 78px;
+}
+
+.amigos_nivel_invitacion {
+  text-align: center;
+  padding-left: 210px;
+  color:#f1f1f1;
+  line-height: 80px; 
+  font-size: 20px;
+  position: fixed;
+  cursor: default;
+  vertical-align: middle;
+  left: 605px;
+  top: 185px;
+  width: 636px;
+  height: 78px;
+}
+
+.invitacion {
+  position: fixed;
+  top: 205px;
+  left: 1200px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
