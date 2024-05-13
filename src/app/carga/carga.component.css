@@ -1,7 +1,7 @@
 
 .wraper_container {
     position: absolute;
-    width:98vw;
+    width:100vw;
     height: 100vh;
 }
 
@@ -116,15 +116,15 @@ h1 {
   .pantalla {
     position: fixed;
     background: #f2f2f2;
-    height: 98vh;
-    width: 98vw;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
 .pantalla2 {
     position: fixed;
-    height: 98vh;
-    width: 98vw;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 

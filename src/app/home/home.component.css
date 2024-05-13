@@ -44,6 +44,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	top: -50px;
 	grid-area: 1/1/2/2;
 	position: relative;
 	a {
@@ -82,6 +83,7 @@ body {
 .logout_button {
     font-family: Raleway, serif;
 		color: #333;
+		top: -50px;
 		cursor: pointer;
 		font-size: 20px;
 		font-weight: 700;
