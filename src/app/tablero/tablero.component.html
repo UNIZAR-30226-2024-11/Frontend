@@ -1,6 +1,11 @@
+<div *ngIf="show_pausa">
+    <app-pausa></app-pausa>
+</div>
 <div class="container">
     <div class="three-quarters">
-      <!-- Contenido para tres cuartos de la pantalla -->
+        <div class="pausa" (click)="openPausa()">
+            <img src="assets/pausa.png">
+        </div>
     </div>
     <div class="separator"></div>
     <div class="one-quarter">

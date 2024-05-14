@@ -96,3 +96,38 @@ h4{
         3px 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
 }
+
+.pausa{
+    top: 20px;
+    left: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    line-height: 1;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border: 3px solid;
+    border-color: #333;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(70px);
+    border-radius: 15px;
+    box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+        3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    will-change: color, text-shadow, font-size;
+    transition: ease all 0.3s;
+    &:hover {
+        transform: scale(1.05);
+        background: rgba(116, 121, 224, 0.8);
+        box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+        3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+img {
+    top: 10px;
+    width: 80px;
+    height: 80px;
+}
