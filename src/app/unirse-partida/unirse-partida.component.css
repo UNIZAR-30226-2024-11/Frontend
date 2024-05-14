@@ -85,8 +85,8 @@ p {
 
 .buscador {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction:row;
+    width: auto;
     justify-content: center;
     input[type="text"] {
         width:310px;
@@ -114,7 +114,6 @@ h4{
     line-height: 1;
     position: relative;
     text-align: center;
-    margin: 1vh auto;
     padding: 2.5vh 0;
     width: 200px;
     height: 45px;
@@ -143,5 +142,15 @@ h4{
     position: relative;
     justify-content: center;
     align-items: center;
-	cursor: pointer;
+}
+
+.pholder {
+    color: #333;
+        margin-right:10px;
+		font-size: 10px;
+		font-weight: 700;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+		position: relative;
 }
