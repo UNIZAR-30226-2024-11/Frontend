@@ -1,0 +1,133 @@
+.container {
+    display: flex; /* Utilizamos flexbox para el layout */
+    height: 100vh; /* Altura total de la ventana del navegador */
+}
+  
+.three-quarters {
+    flex: 3; /* La parte que ocupa tres cuartos */
+    background-image: url('/assets/tablero-inicial.png'); /* Reemplaza 'tu-imagen.jpg' con la ruta y nombre de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
+    background-position: center; /* Centra la imagen */
+}
+  
+.one-quarter {
+    flex: 1; /* La parte que ocupa un cuarto */
+    background-color: #f0f0f0; /* Color de fondo opcional */
+}
+  
+.separator {
+    width: 1px; /* Ancho de la línea de separación */
+    background-color: black; /* Color de la línea de separación */
+}
+
+.title {
+    position: absolute;
+    font-family: Raleway, serif;
+	color: #333;
+	font-size: 50px;
+	font-weight: 700;
+    line-height: 1;
+	position: relative;
+	text-align: center;
+	padding: 2.5vh 0;
+	width: 95%;
+}
+
+.separator2 {
+    width: 100%; /* Ancho de la línea horizontal */
+    height: 1px; /* Grosor de la línea horizontal */
+    background-color: black; /* Color de la línea horizontal */
+}
+  
+input[type="text"] {
+    width:310px;
+    height: 50px;
+    font-size: 20px;
+    font-family: Raleway, serif;
+    color: #333;
+    font-weight: 500;
+    border-color: #333;
+    border-radius: 15px;
+    border: 3px solid;
+}
+
+.barra{
+	overflow-y:inherit;
+	overflow-x: hidden;
+	max-height: 500px;
+    max-width: 300px;
+}
+
+.chat{
+    display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+
+
+h4{
+    font-family: Raleway, serif;
+    color: #333;
+    top: -8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    text-align: center;
+    margin: 1vh auto;
+    padding: 2.5vh 0;
+    width: 100px;
+    border: 3px solid;
+    border-color: #333;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(70px);
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+        3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    will-change: color, text-shadow, font-size;
+    transition: ease all 0.3s;
+    &:hover {
+        transform: scale(1.05);
+        background: rgba(4, 141, 27, 0.8);
+        box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+        3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+.pausa{
+    top: 20px;
+    left: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    line-height: 1;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border: 3px solid;
+    border-color: #333;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(70px);
+    border-radius: 15px;
+    box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+        3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    will-change: color, text-shadow, font-size;
+    transition: ease all 0.3s;
+    &:hover {
+        transform: scale(1.05);
+        background: rgba(116, 121, 224, 0.8);
+        box-shadow: 1px 1px 0 0 rgba(4, 141, 27, 0.8) inset,
+        3px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+img {
+    top: 10px;
+    width: 80px;
+    height: 80px;
+}

@@ -1,1 +1,22 @@
-<p>tablero works!</p>
+<div *ngIf="show_pausa">
+    <app-pausa></app-pausa>
+</div>
+<div class="container">
+    <div class="three-quarters">
+        <div class="pausa" *ngIf="!show_pausa" (click)="openPausa()">
+            <img src="assets/pausa.png">
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="one-quarter">
+        <div class="title">CHAT</div>
+        <div class="separator2"></div>
+        <ul class="barra">
+            <p *ngFor="let mensaje of mensajes">Usuario1: {{ mensaje }}</p>
+        </ul>
+        <nav class="chat">
+            <input type="text" placeholder="Escribe algo" [(ngModel)]="mensaje">
+            <h4 class="enviar" (click)="agnadirMensaje()">ENVIAR</h4>
+        </nav>
+    </div>
+</div>
