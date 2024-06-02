@@ -28,38 +28,38 @@ export class RegisterComponent {
               private cookieService: CookieService,
               private http: HttpClient) { }
 
-  /**
+/**
    * Método para registrar un nuevo usuario.
    * Realiza una solicitud HTTP POST al servidor de backend para registrar al usuario con los datos proporcionados.
-   * Si el registro es exitoso, guarda el token de autenticación en una cookie y redirige al usuario a la página de inicio.
+   * Si el registro es exitoso, redirige al usuario a la página de inicio de sesión.
    * En caso de error, maneja los errores y actualiza el estado de coincidencia de contraseñas.
    */
-  register() {
-    console.log("Registrarse con: ", this.correo, " y contraseña:", this.password, " y usuario: ", this.usuario);
-    if (this.password == this.password_confirm) {
-      this.passwordsMatch = true;
-      this.http.post<any>(`${this.apiURL}/register`, {
-        username: this.usuario, email: this.correo,
-        password: this.password
-      })
-        .subscribe({
-          next: (response) => {
-            if (response.token) {
-              // Registro válido
-              this.cookieService.set('token', response.token);
-              this.router.navigate(['/home']);
-            } else {
-              // Error en registro
-              console.error('Error en registro de usuario', response.error);
-            }
-          },
-          error: (error) => {
+register() {
+  console.log("Registrarse con: ", this.correo, " y contraseña:", this.password, " y usuario: ", this.usuario);
+  if (this.password == this.password_confirm) {
+    this.passwordsMatch = true;
+    this.http.post<any>(`${this.apiURL}/register`, {
+      username: this.usuario, email: this.correo,
+      password: this.password
+    })
+      .subscribe({
+        next: (response) => {
+          // Registro exitoso
+          console.log('Registro exitoso:', response);
+          this.router.navigate(['/login']); // Redirige a la página de login
+        },
+        error: (error) => {
+          // Manejo de errores
+          if (error.error && error.error.error) {
+            console.error('Error en registro de usuario:', error.error.error);
+          } else {
             console.error('Error en la solicitud HTTP:', error);
           }
-        });
-    } else {
-      // Notificar al usuario que las contraseñas no coinciden
-      this.passwordsMatch = false;
-    }
+        }
+      });
+  } else {
+    // Notificar al usuario que las contraseñas no coinciden
+    this.passwordsMatch = false;
   }
+}
 }
