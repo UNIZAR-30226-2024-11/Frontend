@@ -64,7 +64,9 @@
 
 .user-exp-wraper {
     top: 100px;
-    display:flex;
+    display:fixed;
+    left: 30%;
+    top: 5%;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -76,7 +78,7 @@
     top: 50%;
     transform: translate(-50%, -60%);
     width: 400px;
-    height: 450px;
+    height: 580px;
     border: 3px solid #ac2779;
     padding: 40px;
     border-radius: 12px;

@@ -1,5 +1,13 @@
 <div class="barra-wraper">
     <div class="barra" [style.width.px]="valorProgreso"></div>
 </div>
-<p style="margin: 20px;">XP: {{ valorProgreso }}</p>
-<p>LVL: {{ nivel }}</p>
+<div class="exp_level_wraper">
+    <div class="column">
+        XP: {{ valorProgreso }}
+    </div>
+    <div class="column" style="margin-top: 25px;">
+        LVL: {{ nivel }}
+    </div>
+</div>
+
+
