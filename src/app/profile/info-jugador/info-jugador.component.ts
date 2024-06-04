@@ -39,11 +39,13 @@ export class InfoJugadorComponent implements OnInit {
     this.http.get<any>(`${this.apiURL}/userdata/${idJson}`).subscribe({
       next: (userData) => {
         console.log('Datos del usuario recibidos correctamente');
-        this._coins = userData.coins || 0;
-        this._games_won = userData.games_won || 0;
+        this._coins = userData.coins;
+        this._games_won = userData.games_won;
         this._username = userData.username;
         this._email = userData.email;
-        // Faltar asignar nJugadas aquí 
+        this._games_played = userData.games_played;
+        this._avatar = userData.avatar;
+        console.log("ID avatar: ", this._avatar);
       },
       error: (error) => {
         console.error('Error al obtener los datos del usuario:', error);

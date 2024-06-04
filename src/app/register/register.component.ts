@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { CommonModule } from '@angular/common';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 /**
  * Componente para la página de registro de usuarios.
@@ -26,6 +27,7 @@ export class RegisterComponent {
 
   constructor(private router: Router,
               private cookieService: CookieService,
+              private toastr: ToastrService,
               private http: HttpClient) { }
 
 /**
@@ -52,6 +54,7 @@ register() {
           // Manejo de errores
           if (error.error && error.error.error) {
             console.error('Error en registro de usuario:', error.error.error);
+            this.toastr.error('Correo ya en uso', 'REGISTRO');
           } else {
             console.error('Error en la solicitud HTTP:', error);
           }
