@@ -145,8 +145,8 @@
         <div class="buscar_amigos">
             <p>BUSCAR AMIGOS</p>
             <nav class="altura1">
-                <input type="text" [(ngModel)]="nombreUsuario" placeholder="Introduce el nombre de usuario">
-                <h4 (click)="verificarNombre()">Buscar</h4>
+                <input type="text" style="padding-left: 5px;" [(ngModel)]="nombreUsuario" placeholder="‎ ‎ Introduce el correo del amigo">
+                <h4 (click)="buscarJugador()">Buscar</h4>
             </nav>
             <nav class="altura2">
                 <div class="amigo">
@@ -161,7 +161,7 @@
             <ul class="barra2">
                 <ng-container *ngFor="let solicitud of solicitudes">
                     <li>
-                        <h3>{{ solicitud }}</h3>
+                        <h3 style="padding-left: 10px;">{{ solicitud }}</h3>
                         <h4 (click)="aceptarSolicitud(solicitud)">ACEPTAR</h4>
                         <h5 (click)="rechazarSolicitud(solicitud)">RECHAZAR</h5>
                     </li>
@@ -169,7 +169,7 @@
             </ul>
         </div>
     </nav>
-    <div class="flujo2">
-        <a href="#home"><app-flujo></app-flujo></a>
-    </div>
+</div>
+<div class="flujo2">
+    <a href="#home"><app-flujo></app-flujo></a>
 </div>

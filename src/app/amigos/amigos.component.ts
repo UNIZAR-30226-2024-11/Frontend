@@ -15,12 +15,12 @@ export class AmigosComponent {
   nombres: string[] = ['Juan', 'María', 'Pedro'];
   respuesta: string = '\n';
   usuarioCorrecto: string = '';
-  noEncontrado: string = 'No se ha encontrado el usuario';
+  noEncontrado: string = 'No se ha encontrado el correo: ';
   mensaje: string = '';
   solicitudes: string[] = ['Laura', 'Martín', 'Pablo', 'Carlos', 'Rafael'];
   amigos: string[] = ['Álvaro', 'Ana', 'David'];
 
-  verificarNombre() {
+  buscarJugador() {
     // Verificar si el nombre introducido por el usuario está en la lista de nombres
     if (this.nombres.includes(this.nombreUsuario)) {
       this.usuarioCorrecto = this.nombreUsuario
