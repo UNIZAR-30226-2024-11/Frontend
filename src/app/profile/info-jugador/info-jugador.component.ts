@@ -40,6 +40,7 @@ export class InfoJugadorComponent implements OnInit {
       next: (userData) => {
         console.log('Datos del usuario recibidos correctamente');
         this._coins = userData.coins;
+        this._level = userData.level;
         this._games_won = userData.games_won;
         this._username = userData.username;
         this._email = userData.email;

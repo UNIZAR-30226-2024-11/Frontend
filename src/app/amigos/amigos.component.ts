@@ -23,7 +23,7 @@ export class AmigosComponent {
   noEncontrado: string = 'No se ha encontrado el usuario con correo: ';
   mensaje: string = '';
   solicitudes?: string[] = [];
-  amigos: string[] = ['Álvaro', 'Ana', 'David'];
+  amigos?: string[] = [];
 
   private apiURL = 'https://backend-eg2q.onrender.com/api';
 
@@ -32,9 +32,9 @@ export class AmigosComponent {
     private toastr: ToastrService,
   ) {}
 
-    // Envio id del usuario logeado
-    // Recibo lista de nombres de los usuarios que han mandado solicitud de amistad al usuario logeado
     ngOnInit(): void {
+
+      // Obtener lista de peticiones de amistad
       this.http.get<any>(`${this.apiURL}/friends/petition_list/${Number(localStorage.getItem('id'))}`).subscribe({
         next: (response) => {
           console.log('Lista de usuarios mandaron petición de amistad recibida correctamente');
@@ -44,9 +44,83 @@ export class AmigosComponent {
           console.error('Error al obtener la lista de peticiones:', error);
         }
       });
+
+      // Obtenemos lista de amigos
+      this.http.get<any>(`${this.apiURL}/friends/friends_list/${Number(localStorage.getItem('id'))}`).subscribe({
+        next: (response) => {
+          console.log('Lista de usuarios mandaron petición de amistad recibida correctamente');
+          this.amigos = response.friends;
+        },
+        error: (error) => {
+          console.error('Error al obtener la lista de peticiones:', error);
+        }
+      });
     }
 
-  buscarJugador() {
+  /**
+   * Declines a friend request from a user.
+   * 
+   * @param usuario - The username of the user whose friend request is being declined.
+   */
+  declinarPeticion(usuario: string): void{
+    this.http.post<any>(`${this.apiURL}/friends/petition_list/decline`, {userId: Number(localStorage.getItem('id')), username: usuario}).subscribe({
+      next: (response) => {
+        if(response.token){
+          console.log('Se ha eliminado la peticion correctamente');
+          if(this.solicitudes && this.solicitudes.length > 0){
+            this.solicitudes = this.solicitudes.filter(item => item !== usuario);
+            this.toastr.success('Peticion eliminada correctamente', 'AMIGOS');
+          }
+          else{
+            this.toastr.success('No hay peticiones por eliminar', 'AMIGOS');
+          }
+        }
+        else{
+          console.error('Error al eliminar la peticion');
+          this.toastr.error('Error al eliminar la peticion:', 'AMIGOS');
+        }
+      },
+      error: (error) => {
+        console.error('Error en la solicitud HTTP:', error);
+        this.toastr.error('Error en la petición:', 'AMIGOS');
+      }
+    });
+  }
+
+  /**
+   * 
+   * @param usuario 
+   */
+  aceptarPeticion(usuario: string): void{
+    this.http.post<any>(`${this.apiURL}/friends/petition_list/accept`, {userId: Number(localStorage.getItem('id')), username: usuario}).subscribe({
+      next: (response) => {
+        if(response.token){
+          console.log('Se ha aceptado la peticion correctamente');
+          if(this.solicitudes && this.solicitudes.length > 0){
+            this.solicitudes = this.solicitudes.filter(item => item !== usuario);
+            this.toastr.success('Peticion aceptada correctamente', 'AMIGOS');
+          }
+          else{
+            this.toastr.success('No hay peticiones por aceptar', 'AMIGOS');
+          }
+        }
+        else{
+          console.error('Error al aceptar la peticion');
+          this.toastr.error('Error al aceptar la peticion:', 'AMIGOS');
+        }
+      },
+      error: (error) => {
+        console.error('Error en la solicitud HTTP:', error);
+        this.toastr.error('Error en la petición:', 'AMIGOS');
+      }
+    });
+  }
+
+  /**
+   * Searches for a player based on their email address.
+   * Retrieves the user ID of the searched player and updates the component's state accordingly.
+   */
+  buscarJugador(): void{
     this.http.get<any>(`${this.apiURL}/friends/search/${this.correoAbuscar}`).subscribe({
       next: (response) => {
         console.log('ID del usuario a buscar correctamente');
@@ -64,6 +138,9 @@ export class AmigosComponent {
     });
   }
     
+    /**
+     * Sends a friend request to the specified user.
+     */
     enviarSolicitud(): void {
       console.log("userId: ", Number(localStorage.getItem('id')), "friendId: ", this._id_usuario_buscado);
       this.http.post<any>(`${this.apiURL}/friends/request`, {userId: Number(localStorage.getItem('id')), friendId: this._id_usuario_buscado}).subscribe({
@@ -83,21 +160,4 @@ export class AmigosComponent {
         }
       });
     }
-
-    aceptarSolicitud(solicitud: string): void {
-      /*
-        // Agregar la solicitud a la lista de amigos
-        this.amigos.push(solicitud);
-        // Eliminar la solicitud de la lista
-        this.solicitudes = this.solicitudes.filter(item => item !== solicitud);
-      */
-    }
-
-    rechazarSolicitud(solicitud: string): void {
-      /*
-        // Eliminar la solicitud de la lista
-        this.solicitudes = this.solicitudes.filter(item => item !== solicitud);
-      */
-    }
-
-}
+  }

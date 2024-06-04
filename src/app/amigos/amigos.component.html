@@ -162,8 +162,8 @@
                 <ng-container *ngFor="let solicitud of solicitudes">
                     <li>
                         <h3 style="padding-left: 10px;">{{ solicitud }}</h3>
-                        <h4 (click)="aceptarSolicitud(solicitud)">ACEPTAR</h4>
-                        <h5 (click)="rechazarSolicitud(solicitud)">RECHAZAR</h5>
+                        <h4 (click)="aceptarPeticion(solicitud)">ACEPTAR</h4>
+                        <h5 (click)="declinarPeticion(solicitud)">RECHAZAR</h5>
                     </li>
                 </ng-container>
             </ul>

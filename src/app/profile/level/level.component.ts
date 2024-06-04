@@ -1,3 +1,5 @@
+import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 /**
@@ -6,14 +8,36 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-level',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './level.component.html',
   styleUrl: './level.component.css'
 })
+
 export class LevelComponent {
   max_largo_barra = 140; // longitud maxima de la barra de exp en pixeles
-  nivel: number = 0; // Nivel actual del usuario
-  valorProgreso: number = 0; // Valor actual de progreso (experiencia) del usuario
+  nivel?: number; // Nivel actual del usuario
+  valorProgreso: number = 40; // Valor actual de progreso (experiencia) del usuario
+  private apiURL = 'https://backend-eg2q.onrender.com/api';
+
+  constructor(
+    private http: HttpClient
+  ) {}
+
+  ngOnInit() {
+    const idJson = localStorage.getItem('id');
+
+    this.http.get<any>(`${this.apiURL}/userdata/${idJson}`).subscribe({
+       next: (userData) => {
+         console.log('Datos del usuario recibidos correctamente');
+         console.log('Nivel:', userData.level);
+         this.nivel = userData.level;
+         // Faltaria la experiencia del usuario, pero no se encuentra en el backend todavia
+       },
+       error: (error) => {
+         console.error('Error al obtener los datos del usuario:', error);
+       }
+     });
+  }
 
   /**
    * Método para ajustar la longitud de la barra de progreso.
@@ -26,7 +50,9 @@ export class LevelComponent {
     }
     else {
       this.valorProgreso = valor - (this.max_largo_barra - this.valorProgreso);
-      this.nivel = this.nivel + 1;
+      if(this.nivel){
+        this.nivel = this.nivel + 1;
+      }
     }
   }
 
